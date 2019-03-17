@@ -15,6 +15,7 @@ spring:
   profiles:
     active: cloud
   datasource:
+#    url: ${vcap.services.broker-db.credentials.jdbcurl:jdbc:hsqldb:hsql://localhost/broker-db}
     url: ${vcap.services.broker-db.credentials.jdbcurl:jdbc:hsqldb:mem:broker-db}
     username: ${vcap.services.broker-db.credentials.username:sa}
     password: ${vcap.services.broker-db.credentials.password:}

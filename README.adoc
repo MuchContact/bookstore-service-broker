@@ -9,6 +9,10 @@ This project implements a sample service broker that adheres to the https://www.
 * https://cloud.spring.io/spring-cloud-open-service-broker/[Spring Cloud Open Service Broker] 2.0.0.BUILD-SNAPSHOT
 
 == Getting Started
+如果想看到内存数据库数据请执行以下代码，并将datasource.url注释行打开：
+
+    java -cp hsqldb-2.4.1.jar org.hsqldb.server.Server --database.0 file.testdb --dbname.0 broker-db
+
 
 This service broker manages instances of a bookstore service.
 
