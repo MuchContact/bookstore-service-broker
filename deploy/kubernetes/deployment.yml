@@ -32,7 +32,7 @@ spec:
         run: bookstore-broker
     spec:
       containers:
-      - image: sample/bookstore-service-broker:0.0.1.BUILD-SNAPSHOT
+      - image: sanjeevkumar761/bookstore-service-broker:0.0.1.BUILD-SNAPSHOT
         name: bookstore-broker
         ports:
         - containerPort: 8080
