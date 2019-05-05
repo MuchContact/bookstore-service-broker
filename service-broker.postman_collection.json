@@ -1,0 +1,303 @@
+{
+	"info": {
+		"_postman_id": "38607cbb-16f9-47a4-9ff7-1689891368bd",
+		"name": "service-broker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "服务目录",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "supersecret",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/v2/catalog",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v2",
+						"catalog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "书店01",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "supersecret",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"service_id\": \"bdb1be2e-360b-495c-8115-d7697f9c6a9e\",\n    \"plan_id\": \"b973fb78-82f3-49ef-9b8b-c1876974a6cd\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v2/service_instances/instance-001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v2",
+						"service_instances",
+						"instance-001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "店主01",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "supersecret",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"service_id\": \"bdb1be2e-360b-495c-8115-d7697f9c6a9e\",\n    \"plan_id\": \"b973fb78-82f3-49ef-9b8b-c1876974a6cd\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v2/service_instances/instance-001/service_bindings/bind-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v2",
+						"service_instances",
+						"instance-001",
+						"service_bindings",
+						"bind-01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新书入库",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":\"1001\",\n\t\"isbn\":\"ISBN-102930\",\n\t\"title\":\"talk art\",\n\t\"author\":\"Micheal\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/bookstores/instance-001/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bookstores",
+						"instance-001",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\b数目列表",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/bookstores/instance-001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bookstores",
+						"instance-001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "书店02",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "supersecret",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"service_id\": \"bdb1be2e-360b-495c-8115-d7697f9c6a9e\",\n    \"plan_id\": \"b973fb78-82f3-49ef-9b8b-c1876974a6cd\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v2/service_instances/instance-002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v2",
+						"service_instances",
+						"instance-002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "02书店店主01",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "supersecret",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"service_id\": \"bdb1be2e-360b-495c-8115-d7697f9c6a9e\",\n    \"plan_id\": \"b973fb78-82f3-49ef-9b8b-c1876974a6cd\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v2/service_instances/instance-002/service_bindings/bind-02-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v2",
+						"service_instances",
+						"instance-002",
+						"service_bindings",
+						"bind-02-01"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
